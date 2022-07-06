@@ -1,0 +1,12 @@
+-----Pet Kingdom Auto Pick UP Orbs By MHD-------
+getgenv().PickUpCoins = true;
+local HumanoidRootPart = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+
+while wait() do
+    if not PickUpCoins then break end
+    for i, v in pairs(game:GetService("Workspace").Debris.Drops:GetDescendants()) do
+        if v:IsA("Part") then
+            v.CFrame = HumanoidRootPart.CFrame
+        end
+    end
+end
